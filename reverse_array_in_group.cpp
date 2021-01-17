@@ -1,6 +1,3 @@
-// { Driver Code Starts
-//Initial template for C++
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,9 +9,16 @@ using namespace std;
 class Solution{
 public:
     void reverseInGroups(vector<long long>& arr, int n, int k){
+   
+   int sets = n/k ;
+   
+   for(auto i = 0 ; i <sets ; i++){
        
+       reverse(arr.begin() + i*k , arr.begin() + (i+1)*k ); 
        
-       
+   }
+   reverse(arr.begin() + sets*k , arr.end());
+   
     }
 };
 
